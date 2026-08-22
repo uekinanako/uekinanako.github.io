@@ -143,6 +143,47 @@
     .fb-icon  { background: #1877f2; }
     .line-icon { background: #06C755; }
 
+    /* ── Brainバナー ── */
+    .brain-banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 14px 20px;
+      border-radius: 16px;
+      text-decoration: none;
+      background: linear-gradient(135deg, #6a3fc9 0%, #a259ff 100%);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      box-shadow: 0 6px 24px rgba(106,63,201,0.45), inset 0 1px 0 rgba(255,255,255,0.25);
+      transition: transform 0.18s, box-shadow 0.18s;
+      animation: pulse-glow-brain 2.4s ease-in-out infinite;
+    }
+    .brain-banner:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 12px 32px rgba(106,63,201,0.6);
+    }
+    .brain-banner:active { transform: translateY(-1px); }
+    @keyframes pulse-glow-brain {
+      0%,100% { box-shadow: 0 6px 24px rgba(106,63,201,0.45), inset 0 1px 0 rgba(255,255,255,0.25); }
+      50%      { box-shadow: 0 6px 36px rgba(106,63,201,0.75), inset 0 1px 0 rgba(255,255,255,0.25); }
+    }
+    .brain-banner .brain-icon {
+      width: 32px;
+      height: 32px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      font-size: 1.1rem;
+    }
+    .brain-banner .brain-text { line-height: 1.25; }
+    .brain-banner .brain-sub { font-size: 0.72rem; font-weight: 400; opacity: 0.88; }
+
     /* ── Substackバナー ── */
     .substack-banner {
       display: flex;
@@ -198,6 +239,15 @@
 <div class="bg-sparkles" id="sparkles"></div>
 
 <div class="container">
+
+  <!-- Brainバナー -->
+  <a href="https://brain-market.com/u/oniku_no_yousei/a/b2ATO3UjMgoTZsNWa0JXY" target="_blank" rel="noopener" class="brain-banner">
+    <div class="brain-icon">✨</div>
+    <div class="brain-text">
+      <div>🌟 推しは、作れる</div>
+      <div class="brain-sub">AIアイドルMV講座 好評発売中</div>
+    </div>
+  </a>
 
   <!-- Substackバナー -->
   <a href="https://onikunoyousei.substack.com/" target="_blank" rel="noopener" class="substack-banner">
